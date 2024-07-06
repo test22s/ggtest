@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaugummi Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, rgb(59, 59, 59), black);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-image {
+    width: 260px;
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0,5);
+}
+
+.product-details {
+    margin-bottom: 20px;
+}
+
+.product-price {
+    font-size: 2rem;
+    color: #ebedec;
+    margin-bottom: 10px;
+}
+
+.product-size {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: rgb(34, 122, 194);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 0 10px;
+    flex: 1;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: rgb(34, 122, 194);
+    transform: scale(1.05);
+}
+
+.product-description {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ddd;
+    text-align: left;
+    max-width: 600px;
+}
+
+.description-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+</style>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kaugummi Shop</h1>
+        </header>
+        <div class="content">
+            <div class="product-container">
+                <img src="Design_ohne_Titel__1_-removebg-preview.png " alt="Kaugummipackung" class="product-image">
+                <div class="product-details">
+                    <div class="product-price">€4.99</div>
+                    <div class="product-size">Inhalt: 20 Stück</div>
+                </div>
+                <div class="buttons">
+                    <button class="button" id="addToCartButton">In den Warenkorb</button>
+                    <button class="button" id="buyNowButton">Jetzt Kaufen</button>
+                    <button class="button" id="customizeButton">Weiter Anpassen</button>
+                </div>
+                <div class="product-description">
+                    <h2 class="description-title">Produktbeschreibung</h2>
+                    <p>Erleben Sie den erfrischenden Geschmack und die belebenden Vorteile unseres einzigartigen Kaugummis. Mit sorgfältig ausgewählten Inhaltsstoffen bietet jeder Bissen eine perfekte Balance aus Geschmack und Funktionalität. Perfekt für unterwegs, nach dem Training oder einfach zwischendurch.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addToCartButton = document.getElementById('addToCartButton');
+            const buyNowButton = document.getElementById('buyNowButton');
+            const customizeButton = document.getElementById('customizeButton');
+
+            addToCartButton.addEventListener('click', () => {
+                alert('Das Produkt wurde in den Warenkorb gelegt!');
+            });
+
+            buyNowButton.addEventListener('click', () => {
+                window.location.href = 'checkout.html'; // replace with your checkout page URL
+            });
+
+            customizeButton.addEventListener('click', () => {
+                window.location.href = 'index.html'; // replace with your customize page URL
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
